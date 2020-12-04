@@ -6,10 +6,15 @@ counter=0
 while IFS= read -r line
 do
     arr=(${line//[-,:]/ })
-    count=$(awk -F"(${arr[2]})" '{print NF-1}' <<< "${arr[3]}}" )
+    lower_bounds=${arr[0]}
+    upper_bounds=${arr[1]}
+    char=${arr[2]}
+    char_seq=${arr[3]}
 
-    if (($count >= ${arr[0]} && $count <= ${arr[1]})); then
-        ((counter++))
+    count=$(awk -F"(${char})" '{print NF-1}' <<< "${char_seq}")
+
+    if (( $count >= $lower_bounds && $count <= $upper_bounds )); then
+        (( ++counter ))
     fi
 
 done < $input
