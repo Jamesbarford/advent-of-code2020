@@ -1,7 +1,6 @@
 class Solver:
     def __init__(self):
         self.tree = "#"
-        self.clear = "."
         self.trees_hit = 0
         self.current_position = 0
         self.line_counter = 1
