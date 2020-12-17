@@ -17,7 +17,6 @@ dim black bags contain 4 wavy lavender bags, 5 drab blue bags.
 pale maroon bags contain 5 vibrant olive bags.
 dotted maroon bags contain 2 faded lime bags, 1 clear turquoise bag.
 light aqua bags contain 5 dark brown bags, 2 shiny gold bags.
-
 vibrant beige bags contain 2 pale cyan bags, 2 dotted crimson bags, 2 vibrant teal bags.
 striped white bags contain 2 shiny gold bags.
 light orange bags contain 1 dim coral bag, 2 vibrant coral bags.
