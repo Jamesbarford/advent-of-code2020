@@ -41,7 +41,6 @@ public:
 
     void remove(T argv)
     {
-        std::cout << "in remove" << std::endl;
         LinkedListNode<T> *previous_node = head->previous;
         LinkedListNode<T> *current_node = head;
         while (current_node != nullptr)
@@ -51,13 +50,9 @@ public:
                 previous_node->next = current_node->next;
 
                 if (current_node->next == nullptr)
-                {
                     current_node->next->previous = previous_node;
-                }
                 else
-                {
                     this->tail = current_node;
-                }
 
                 --_size;
             }
@@ -74,8 +69,8 @@ public:
 
         if (this->head == nullptr)
         {
-            head = new_node;
-            tail = new_node;
+            this->head = new_node;
+            this->tail = new_node;
             return;
         }
 
@@ -83,9 +78,7 @@ public:
         {
             LinkedListNode<T> *current_node = this->head;
             while (current_node->next != nullptr)
-            {
                 current_node = current_node->next;
-            }
 
             current_node->next = new_node;
             new_node->previous = current_node;
