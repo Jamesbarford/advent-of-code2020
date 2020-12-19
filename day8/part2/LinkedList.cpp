@@ -19,7 +19,6 @@ public:
     class Iterator;
     void remove_at(int position)
     {
-        this->print();
         LinkedListNode<T> *previous_node = head->previous;
         LinkedListNode<T> *current_node = head;
 
@@ -37,8 +36,6 @@ public:
             current_node->next->previous = previous_node;
         else
             this->tail = current_node;
-        std::cout << "post removal ::: " << std::endl;
-        this->print();
         --_size;
     }
 
